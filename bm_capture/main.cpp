@@ -11,7 +11,7 @@
 
 extern "C" {
 #include "ring_buffer.h"
-#include "libavpipe.h"
+#include "libwiav.h"
 }
 
 // Comment this out for production...

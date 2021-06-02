@@ -1,0 +1,34 @@
+
+The WiAV format 0.1 bitstream should follow the format:
+
+HEADER (ONLY IN THE BEGINNIG OF THE STREAM) | 
+FRAME_HEADER |
+VIDEO FRAME PAYLOAD SIZE (ONLY WHEN USING COMPRESSED VIDEO) | 
+VIDEO PAYLOAD | 
+AUDIO FRAME PAYLOAD SIZE | 
+AUDIO PAYLOAD 
+
+- HEADER: Is a variable size header that uses ASCII, that should end with a "\n", and has the following format:
+
+WIAV x_resolution y_resolution color_space audio_channels audio_sample_size video_sample_size interlaced compressed\n
+
+- FRAME_HEADER: A identifier for a new A/V frame
+
+WIAV\n
+
+- VIDEO FRAME PAYLOAD SIZE (only when compressed): Is a variable size header that uses ASCII, ONLY WHEN USING COMPRESSED VIDEO, end with a "\n"
+max size: 11 bytes, max value: 99999999999
+
+payload_size\n
+
+- VIDEO PAYLOAD: Is a constant size payload field if using non compressed video, otherwise, if a variable size field, w/ the size
+being specified in the VIDEO FRAME PAYLOAD SIZE.
+
+- AUDIO FRAME PAYLOAD SIZE: Is a variable size header that uses ASCII, end with a "\n".
+max size: 11 bytes, max value: 99999999999
+
+payload_size\n
+
+- AUDIO PAYLOAD: Is a variable size field that contains the audio payload.
+
+

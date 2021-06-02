@@ -1,0 +1,4 @@
+- colocar no cabecalho parametros como FPS e audio samplerate e versao do WIAV bitstream 
+antes do congelamento do formato 1.0 do bitstream 
+- testar com outras resolucoes que nao 1920x1080 - muito provavelmente nao vai funcionar.
+- tamanho maximo deve ser 1920x1080 - existem tamanhos de buffer hardcodados e etc...
