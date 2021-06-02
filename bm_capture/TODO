@@ -1,0 +1,4 @@
+TODO
+- implement packed yuv to planar 4:2:0 yuv conversion, so then we'll be able to feed x264 directly
+- (NOOOOO, we don't have to use ffmpeg anymore, x264 know about interlaced material!!!) add -deinterlace to ffmpeg command like, in order for it make the de-interlacion
+- No caso de captura multiplexada, usar somente um buffer de forma que as chamadas de leitura do video e do audio sejam intercaladas.    

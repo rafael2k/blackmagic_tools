@@ -1,0 +1,2 @@
+No caso de playback multiplexado, usar somente um buffer de forma 
+que as chamadas de escrita do video e do audio sejam intercaladas.
